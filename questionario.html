@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+	<link rel="stylesheet" href="proyect.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="cuestionario/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="cuestionario/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="cuestionario/jspdf.js"></script>
+	<script type="text/javascript" src="cuestionario/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="cuestionario/jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="cuestionario/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="cuestionario/jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==10)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==5)
+        	document.getElementById("comentario").innerHTML="La mitad :(";
+        else
+        	if(total<=5)
+        	document.getElementById("comentario").innerHTML="Estudia ";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "10 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "5 puntos. Regular. \r Obtuviste 5 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+	<header class="header">
+		<div class="logo">         
+			<img src="img/big_data.png" alt="bgdata">
+	   </div>
+	   <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="memes.html">MEMES</a></li>
+            <li><a href="#">Interaccion</a>
+                <ul class="menuv">
+                    <li><a href="questionario.html">Cuestionario</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#">Ayuda</a>
+                <ul class="menuv">
+                    <li><a href="questions1.html">Preguntas Frecuentes</a></li>
+                    <li><a href="ayuda.html">Grupos de ayuda</a></li>
+                    <li><a href="redes.html">Redes sociales</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+		<a href="#" class="btn"><button>Contacto</button></a>
+	</header>
+	
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>BIG DATA Y ANALISIS DE DATOS</h2>
+	<p>¿Qué tanto aprendiste del tema?</p>
+	</div>
+	
+	<div id="estilo">
+	<form>
+	<ul class="preguntas">
+
+		<li class="preguntas1"> ¿Qué es Big Data?</li><br/>
+		<input type="radio" name="r1" id="r1" value="1"/>A.Una gran cantidad de datos que no se pueden procesar utilizando métodos tradicionales.<br/><br/>
+		<input type="radio" name="r1" id="r1" value="0"/>B.Una pequeña cantidad de datos que se puede procesar fácilmente.<br/><br/>
+		<input type="radio" name="r1" id="r1" value="0"/>C.Un tipo de datos que no es útil para las empresas.<br/><br/>
+
+		
+		<li class="preguntas1" >¿Cuál de los siguientes NO es un beneficio del Big Data y el análisis de datos?</li><br/>
+		<input type="radio" name="r2" id="r2" value="0"/>A.Mejores decisiones basadas en datos.<br/><br/>
+		<input type="radio" name="r2" id="r2" value="1"/>B.Mayor eficiencia y productividad.<br/><br/>
+		<input type="radio" name="r2" id="r2" value="0"/>C.Peores resultados de los pacientes.<br/><br/>
+
+		<li class="preguntas1">¿Cuál de las siguientes NO es una aplicación del Big Data y el análisis de datos?</li><br/>
+		<input type="radio" name="r3" id="r3" value="0"/>A.Atención sanitaria<br/><br/>
+		<input type="radio" name="r3" id="r3" value="0"/>B.Finanzas<br/><br/>
+		<input type="radio" name="r3" id="r3" value="1"/>C.Agricultura<br/><br/>
+
+        <li class="preguntas1">¿Cuál de las siguientes tecnologías NO se utiliza en Big Data y análisis de datos?</li><br/>
+		<input type="radio" name="r4" id="r4" value="0"/>A.Hadoop<br/><br/>
+		<input type="radio" name="r4" id="r4" value="0"/>B.Spark<br/><br/>
+		<input type="radio" name="r4" id="r4" value="1"/>C. Microsoft Word.<br/><br/>
+
+
+		<li class="preguntas1">¿Qué es el “overfitting” en el contexto del aprendizaje automático?</li><br/>
+		<input type="radio" name="r5" id="r5" value="0"/>A.Es un proceso para reducir el ruido en los datos.<br/><br/>
+		<input type="radio" name="r5" id="r5" value="1"/>B.Es un modelo que se ajusta perfectamente a los datos de entrenamiento pero no generaliza bien a datos nuevos.<br/><br/>
+		<input type="radio" name="r5" id="r5" value="0"/>C. Es una técnica para aumentar la precisión de los modelos de regresión.<br/><br/>
+
+
+		<li class="preguntas1"> ¿Cuál de los siguientes NO es un tipo de base de datos NoSQL?</li><br/>
+		<input type="radio" name="r6" id="r6" value="0"/>A.Documentales<br/><br/>
+		<input type="radio" name="r6" id="r6" value="1"/>B. Relacionales<br/><br/>
+		<input type="radio" name="r6" id="r6" value="0"/>C.Clave-valor<br/><br/>
+
+		<li class="preguntas1">¿Qué es el “sampling” en estadísticas?</li><br/>
+		<input type="radio" name="r7" id="r7" value="1"/>A.Un método para reducir el tamaño de la muestra.<br/><br/>
+		<input type="radio" name="r7" id="r7" value="0"/>B.Un proceso para aumentar la precisión de los datos.<br/><br/>
+		<input type="radio" name="r7" id="r7" value="0"/>C.Un enfoque para eliminar valores atípicos.<br/><br/>
+
+		<li class="preguntas1">¿Cuál de los siguientes NO es un algoritmo de aprendizaje no supervisado?</li><br/>
+		<input type="radio" name="r8" id="r8" value="0"/>A.K-Means<br/><br/>
+		<input type="radio" name="r8" id="r8" value="1"/>B.Regresión logística<br/><br/>
+		<input type="radio" name="r8" id="r8" value="0"/>C.PCA (Análisis de Componentes Principales)<br/><br/>
+
+		<li class="preguntas1">¿Qué es Hadoop?</li><br/>
+		<input type="radio" name="r9" id="r9" value="0"/>A. Un lenguaje de programación para análisis de datos.<br/><br/>
+		<input type="radio" name="r9" id="r9" value="0"/>B.Un sistema de gestión de bases de datos relacionales.<br/><br/>
+		<input type="radio" name="r9" id="r9" value="1"/>C.Un framework para procesar y almacenar grandes volúmenes de datos distribuidos.<br/><br/>
+
+		<li class="preguntas1">¿Cuál de los siguientes NO es un paso en el proceso de minería de datos?</li><br/>
+		<input type="radio" name="r10" id="r10" value="0"/>A.Preprocesamiento de datos<br/><br/>
+		<input type="radio" name="r10" id="r10" value="0"/>B.Extracción de características<br/><br/>
+		<input type="radio" name="r10" id="r10" value="1"/>C. Evaluación del modelo <br/><br/>
+		
+	</ul>
+</form>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<input id="button" type="button" value="Calificar" onclick="califica()">
+<br><br>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input id="button" type="button" onclick="generar()" value="Ver resultados"/> <br/><br/> <br/>
+<iframe  frameborder="0" width="760" height="450"></iframe>
+</div>
+</body>
+</html>

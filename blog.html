@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Blog</title>
+<link rel="stylesheet" href="proyect.css">
+<script type="text/javascript" src="Blog/blog.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">         
+             <img src="img/big_data.png" alt="bgdata">
+        </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="memes.html">MEMES</a></li>
+            <li><a href="#">Interaccion</a>
+                <ul class="menuv">
+                    <li><a href="questionario.html">Cuestionario</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#">Ayuda</a>
+                <ul class="menuv">
+                    <li><a href="questions1.html">Preguntas Frecuentes</a></li>
+                    <li><a href="ayuda.html">Grupos de ayuda</a></li>
+                    <li><a href="redes.html">Redes sociales</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <a href="#" class="btn"><button>Contacto</button></a>
+    </header>
+
+    <section id="cajaformulario">
+
+        <form name="formulario" id="cajaformulario">
+            <p class="txt1">Usuario:<br><input type="text" name="clave" id="clave"></p>
+
+            <p class="txt1">Comentario:<br><textarea name="text" id="texto"></textarea></p>
+            <br>
+            <p><input type="button" name="grabar" id="grabar"
+            value="Comentar"></p>
+            
+            <p><input type="button" name="eliminar" id="eliminar"
+            value="Borrar Comentarios" onclick="elimina()"></p>
+
+        </form>
+    </section>
+
+    <section id="cajadatos">
+        <p class="txt1">Sin comentarios</p>
+    </section>
+</body>
+</html>
