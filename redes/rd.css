@@ -1,0 +1,118 @@
+
+
+.reds {
+    width: 150px;
+    height: 150px;
+    background-color: #db5b3a;
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    float: left;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.espacio {
+    width: 128px;
+    height: 250px;
+    background-color: #fbfbfb00;
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    float: left;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+
+.reds:hover {
+    background-color: rgb(4, 4, 4);
+    border-radius: 100%;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+
+#textor {
+    text-decoration: none;
+    color: #ffffffff;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#textor:active {
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 80%;
+    transition: all 0.3s ease;
+
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(254, 254, 254);
+    box-shadow: rgba(5, 5, 5, 0.703) 5px 5px ;
+    -moz-box-shadow: rgba(5, 5, 5, 0.703) 5px 5px ;
+    -webkit-box-shadow: rgba(5, 5, 5, 0.703) 5px 5px ;
+
+}
+
+.title1{
+    background-color: #e13d14;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 400;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.redsa {
+    width: 150px;
+    height: 150px;
+    background-color: #e13d14;
+    color: #333;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    float: left;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.redsa:hover {
+    
+    background-color: #cd2d2d;
+
+    border-radius: 100%;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}

@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@media screen {
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+}
+body{
+    background-color:rgb(255, 255, 255) ;
+}
+
+.header{
+    background-color:  #0f0f0f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.1);
+
+}
+
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+.header .nav-links a{
+    font-size: 28;
+    color: rgb(249, 247, 247);
+    font-weight: 700;
+    text-decoration: none;
+}
+.header .nav-links li a:hover{
+    color: #e4dcdf;
+}
+
+    
+    .menuv{
+        position: absolute;
+        display: none;
+        list-style: none;
+        width: 200px;
+        background-color: #2b2b2b86;
+        
+    
+    }
+    
+    .nav-links li:hover .menuv{
+        display: block;
+    
+    
+    }
+    .menuv li:hover{
+        background-color: #2b2b2b;
+    }
+    
+    .menuv li a{
+        display: block;
+        color: white;
+        padding: 15px 15px 15px 20px;
+    
+    }
+
+
+.header .btn button{
+    font-weight: 800;
+    color: black;
+    padding: 9px 25px;
+    background-color: #D1D3D4;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.header .btn button:hover{
+    background-color: black;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.datos{
+    
+    background-color: #36454f;
+    color: #e4e6e7;
+    padding: 15px 25px;
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: #574533 5px 5px;
+    margin-bottom: 50px;
+}
+.datos h1,.datos h2, .fuentes h3{
+    text-align: center;
+    font-size: x-large;
+}
+.datos p{
+    text-align: center;
+    font-size: large;
+    font-weight: 450;
+}
+.datos li{
+    margin-left: 100px;
+    text-align: left;
+    
+}
+.datos1{
+    background-color: #ee6f8b;
+    padding: 15px 25px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-bottom: 20px ;
+    border: none;
+    box-shadow: #574533 5px 5px;
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+}
+.fuentes{
+    background-color: #ee6f8b;
+    padding: 15px 25px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px ;
+    margin-left: 60px;
+    border: none;
+    box-shadow: #574533 5px 5px;
+    text-align: justify;
+    font-size: large;
+    font-style: italic;
+}
+.portfolio{
+    background-color: #f3bb60;
+    color: #574533;
+    padding: 50px 20px;
+    border-radius: 25px;
+    box-shadow: #574533 0 6px;
+}
+.portfolio .galeria{
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .galeria .proyecto{
+    position:relative;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+img{
+    width: 50%;
+    margin-left: 23%;
+}
+video{
+    width: 50%;
+    margin-left: 23%;
+}
+
+
+
+
+form .preguntas{
+    list-style: none;
+}
+
+form .preguntas li{
+    height: auto;
+    background-color:rgba(37, 36, 64, 0.521);
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    float: center;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(250, 249, 249);
+    overflow: hidden;
+    display: block;
+
+}
+#estilo{
+    background-color:rgba(255, 255, 255, 0.377); 
+    border: 20px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    color: rgb(6, 6, 6);
+    margin: auto;
+    width: 800px;
+    margin-top: 160px;
+
+
+}
+
+#button{
+    width: 350px;
+    height: 30px;
+    background-color: rgb(37, 36, 64);
+    font-family: "Madimi One", sans-serif;
+    font-style: normal;
+    color: rgb(247, 247, 247);
+    margin: auto;
+    float: center;
+    margin-left: 225px;
+    
+
+}
+#total{
+    text-align: center;
+
+}
+
+#comentario{
+    text-align: center;
+
+}
+
+#frame{
+    float: center;
+}
+
+#contiene{
+    width: 100%;
+    height: 160px;
+    background-color: rgba(37, 36, 64, 0.407);
+    float: left;
+    text-align: center;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    color: rgb(4, 4, 4);
+    padding: 50px;
+
+}
+
+
+#cajaformulario{
+    margin: 30px;
+    float: left;
+    padding: 20px;
+    border: 2px solid #422e70;
+    border-radius: 10px;
+    background-color: #e0b35e;
+}
+#cajadatos{
+    float: left;
+    width: 450px;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #7a3197;
+    border-radius: 5px;
+    background-color: #e0b35e;
+}
+#clave, #texto{
+        width: 200px;
+        height: 50px;
+        background-color: rgb(240, 240, 157);
+        box-shadow: -3px 2px #e0b35e;
+        border-radius: 5px;
+        
+}
+#cajadatos > div{
+    padding: 5px;
+    border-bottom: 1px solid #e0b35e;
+    background-color: #e0b35e;
+}
+.txt1{
+    background-color: #e0b35e;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    font-style: italic;
+}
+#grabar, #eliminar{
+    background-color: #da9d2c;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+
+}
+
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  
+  .carousel-content {
+    display: flex;
+  }
+  
+  .carousel-content img {
+    width: 600px;
+    display: none;
+  }
+  
+  .carousel-content img.active {
+    display: block;
+  }
+  
+  .Cbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #prevBtn {
+    left: 0;
+  }
+  
+  #nextBtn {
+    right: 0;
+  }
+
