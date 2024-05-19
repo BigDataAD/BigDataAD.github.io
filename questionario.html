@@ -49,15 +49,15 @@ function generar(){
 var doc = new jsPDF();
 
 //Definir el tamaño de la letra
-doc.setFontSize(40);
+doc.setFontSize(70);
 //Color del texto
-doc.setTextColor(9,7,121);
-doc.text(40, 20, "Conceptos basicos");
-doc.setTextColor(17, 122, 209); //Color en formato RGB
-doc.setFontSize(30);
-doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
 doc.setTextColor(0,0,0);
-doc.setFontSize(10);
+doc.text(40, 20, "revision del cuestionario");
+doc.setTextColor(0, 0, 0); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados de la prueba"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(30);
 doc.text(20, 50, "10 puntos. Muy bien. \r Todas tus respuestas son correctas");
 doc.text(20, 70, "5 puntos. Regular. \r Obtuviste 5 preguntas correctas");
 doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
@@ -176,7 +176,7 @@ $('iframe').attr('src', string);
 <p id="total">   </p>
 <p id="comentario">   </p>
 <input id="button" type="button" onclick="generar()" value="Ver resultados"/> <br/><br/> <br/>
-<iframe  frameborder="0" width="760" height="450"></iframe>
+<iframe  frameborder="0" width="auto" height="450"></iframe>
 </div>
 </body>
 </html>
