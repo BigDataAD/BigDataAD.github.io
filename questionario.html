@@ -52,7 +52,7 @@ var doc = new jsPDF();
 doc.setFontSize(70);
 //Color del texto
 doc.setTextColor(0,0,0);
-doc.text(40, 20, "revision del cuestionario");
+doc.text(20, 10, "revision del cuestionario");
 doc.setTextColor(0, 0, 0); //Color en formato RGB
 doc.setFontSize(30);
 doc.text(50, 35, "Resultados de la prueba"); //Ubicación, Texto
@@ -176,7 +176,7 @@ $('iframe').attr('src', string);
 <p id="total">   </p>
 <p id="comentario">   </p>
 <input id="button" type="button" onclick="generar()" value="Ver resultados"/> <br/><br/> <br/>
-<iframe  frameborder="0" width="800" height="500"></iframe>
+<iframe  frameborder="0" width="1800" height="500"></iframe>
 </div>
 </body>
 </html>
